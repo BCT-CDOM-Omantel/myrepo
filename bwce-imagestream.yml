@@ -1,0 +1,52 @@
+{
+    "apiVersion": "v1",
+    "kind": "ImageStream",
+    "metadata": {
+        "annotations": {
+            "openshift.io/display-name": "bwce"
+        },
+        "name": "bwcebase"
+    },
+    "spec": {
+        "tags": [
+			{
+                "name": "latest",
+                "annotations": {
+                  "description": "Build and run BWCE applications on debian:stretch-slim.",
+                  "iconClass": "icon-go-gopher",
+                  "openshift.io/display-name": "bwce latest",
+                  "openshift.io/provider-display-name": "",
+                  "sampleRepo": "",
+                  "supports": "bwce",
+                  "tags": "builder,bwce"
+                },
+                "from": {
+                    "kind": "DockerImage",
+                    "name": "docker.io/atulrevanwar/bwce-base-image:2.5.3"
+                },
+                "referencePolicy": {
+                    "type": "Local"
+                }
+            },
+			{
+                "name": "2.5",
+                "annotations": {
+                  "description": "Build and run BWCE applications on debian:stretch-slim.",
+                  "iconClass": "icon-go-gopher",
+                  "openshift.io/display-name": "bwce 2.5.3",
+                  "openshift.io/provider-display-name": "",
+                  "sampleRepo": "",
+                  "supports": "bwce",
+                  "tags": "builder,bwce"
+                },
+                "from": {
+                    "kind": "DockerImage",
+                    "name": "docker.io/atulrevanwar/bwce-base-image:2.5.3"
+                },
+                "referencePolicy": {
+                    "type": "Local"
+                }
+            }
+        ]
+    }
+}
