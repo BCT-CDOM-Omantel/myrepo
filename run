@@ -1,2 +1,3 @@
-echo "ruuning run file"
-pwd
+#!/bin/bash
+echo "Executing run script************"
+/scripts/start.sh
