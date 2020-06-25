@@ -1,4 +1,4 @@
-FROM tibco-bwce-bim:2.5
+FROM tibco-bwce-new:2.5.3
 
 USER 1001
 
@@ -6,6 +6,5 @@ ADD assemble /usr/libexec/s2i/
 
 ADD run /usr/libexec/s2i/
 
-ADD RestService.application_1.0.0.ear /
+ENTRYPOINT ["/scripts/start.sh"]
 
-EXPOSE 8384
